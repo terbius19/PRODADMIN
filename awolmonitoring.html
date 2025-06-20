@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRODUCTION ADMINISTRATOR</title>
+    <link rel="stylesheet" href="styles.css">
+<link rel="icon" href="icons/adminlogo.png" type="image/png">
+
+</head>
+<body>
+    <header>
+<nav>
+            <div class="logo">
+                <a href="productionadmin_index.html">
+                <img src="icons/adminlogo.png" alt="Logo">
+                </a>
+                <a href="" class="no-underline">
+                </a>
+            </div>
+        </nav>
+    
+        <h1>AWOL MONITORING</h1> 
+    </header>
+
+
+
+<div class="center-controls">
+
+ <div class="search-container">
+
+<button onclick="clearSearch()">Clear</button>
+<input type="text" id="search" oninput="updateSections()" placeholder="Search...">
+<select id="filter" onchange="updateSections()">
+  <option value="all">All</option>
+  <option value="softcopy">Word Soft Copy of Letters</option>
+  <option value="proof">Proof of Mailing</option>
+  <option value="others">Others</option>
+  <!-- Add more categories as needed -->
+
+</select>
+
+</div>
+</div>
+
+<section class="navigate-icons">
+  <a href="awolmonitoring.html" title="AWOL Monitoring"><img src="icons/rtwnnod.png" alt="Icon 3"></a>
+  <a href="standardprocesses.html" title="Standard Processes"><img src="icons/standardprocesses.png" alt="Icon 4"></a>
+  <a href="cic.html" title="Company Identification Card 2025"><img src="icons/cic.png" alt="Icon 5"></a>
+  <a href="ukg.html" title="CJoy UKG 2025"><img src="icons/ukg.png" alt="Icon 6"></a>
+  <a href="employeeconcerns.html" title="Employee Concerns"><img src="icons/employeeconcerns.png" alt="Icon 7"></a>
+  <a href="liquidation.html" title="CJoy Reimbursement and Liquidation"><img src="icons/liquidation.png" alt="Icon 8"></a>
+  <a href="onboarding.html" title="Onboarding 2025"><img src="icons/onboarding.png" alt="Icon 9"></a>
+  <a href="cocolife.html" title="Cocolife"><img src="icons/files.png" alt="Icon 10"></a>
+  <a href="manhour.html" title="Fy25 Manhour Report"><img src="icons/manhour.png" alt="Icon 1"></a>
+  <a href="offboarding.html" title="Offboarding"><img src="icons/offboarding.png" alt="Icon 2"></a>
+
+
+</section>
+
+
+    <main class="sections">
+
+	<a href="https://cargillonline-my.sharepoint.com/:w:/g/personal/reginejoan_tayco_cargill_com/EbPTQU8NgZRPhzIHAJjGq8UBXEw-Jl-st4t3194rwPfeuw?e=XQUx5A" target="_blank" class="section-link" title="NOD Docx 2.14.2025 pdf" data-filter="softcopy">
+        <div class="section">
+            <img src="icons/rtwnnod.png" alt="NOD Docx 2.14.2025">
+            <h2>NOD Docx 2.14.2025</h2>
+        </div>
+	</a>
+
+<a href="https://cargillonline-my.sharepoint.com/:w:/g/personal/reginejoan_tayco_cargill_com/EbeqSSw1pslLmNtYWeHhV34BXnYo52lTpzPiz3E5Hd-bfA?e=pH5L3n" target="_blank" class="section-link" title="NOD Docx 2.12.2025 pdf" data-filter="softcopy">
+        <div class="section">
+            <img src="icons/rtwnnod.png" alt="AWOL Docx 2.12.2025">
+            <h2>AWOL Docx 2.12.2025</h2>
+        </div>
+	</a>
+
+<a href="https://cargillonline-my.sharepoint.com/:w:/g/personal/reginejoan_tayco_cargill_com/EXD3t4r411ZBiifeUF9rSJsBKnQnbrKtAsJIswyog1targ?e=4cPPk8" target="_blank" class="section-link" title="RTWN & NTE 2.3.2025 docx" data-filter="softcopy">
+        <div class="section">
+            <img src="icons/rtwnnod.png" alt="RTWN & NTE 2.3.2025">
+            <h2>RTWN & NTE 2.3.2025</h2>
+        </div>
+	</a>
+
+<a href="https://cargillonline-my.sharepoint.com/:w:/g/personal/reginejoan_tayco_cargill_com/EbhBn9KcyLxIqaf_pNx8iBgBcZypWcFOwUi8VBoL606f4Q?e=bezfYd" target="_blank" class="section-link" title="RTWN & NTE 2.5.2025 docx" data-filter="softcopy">
+        <div class="section">
+            <img src="icons/rtwnnod.png" alt="RTWN & NTE 2.5.2025">
+            <h2>RTWN & NTE 2.5.2025</h2>
+        </div>
+	</a>
+
+<a href="https://cargillonline-my.sharepoint.com/:b:/g/personal/reginejoan_tayco_cargill_com/EVsIoJ76GcdMg7X9iqaeH9oBcD6gcoENIvmDE4bTiKK2wg?e=LTCj9y" target="_blank" class="section-link" title="RTWN & NTE 2.18.2025 pdf" data-filter="proof">
+        <div class="section">
+            <img src="icons/rtwnnod.png" alt="NOD 2.18.2025">
+            <h2>RTWN & NTE 2.18.2025</h2>
+        </div>
+	</a>
+
+<a href="https://cargillonline-my.sharepoint.com/:b:/g/personal/reginejoan_tayco_cargill_com/Ef28K9OLCg5Eg-27ceSEdSQBwczcuZrgzRckdDNU3nE_Aw?e=J3b8QI" target="_blank" class="section-link" title="RTWN & NTE Signed Letters 2.6.2025" data-filter="proof">
+        <div class="section">
+            <img src="icons/rtwnnod.png" alt="RTWN & NTE Signed Letters 2.6.2025">
+            <h2>RTWN & NTE Signed...</h2>
+        </div>
+	</a>
+
+<a href="https://cargillonline-my.sharepoint.com/:w:/g/personal/reginejoan_tayco_cargill_com/EaJym8IwfS9Dowe8vPEEVOgBSwzcUB1YmTq7639oeS-9fA?e=fBk7hy" target="_blank" class="section-link" title="NOD Template Rev1 docx" data-filter="others">
+        <div class="section">
+            <img src="icons/rtwnnod.png" alt="NOD Template Rev1">
+            <h2>NOD Template Rev1</h2>
+        </div>
+	</a>
+
+<a href="https://cargillonline-my.sharepoint.com/:w:/g/personal/reginejoan_tayco_cargill_com/EdFHjLWlm9VNrcTFNKoOdWUBza8fwhgIOX-dTWl5xVqJGQ?e=Hetw0S" target="_blank" class="section-link" title="RTWN & NTE Template docx" data-filter="others">
+        <div class="section">
+            <img src="icons/rtwnnod.png" alt="RTWN & NTE Template">
+            <h2>RTWN & NTE Template</h2>
+        </div>
+	</a>
+
+<a href="https://cargillonline-my.sharepoint.com/:x:/g/personal/reginejoan_tayco_cargill_com/EWRXKWtG_rBDgvYjPh8QR18BzHkWpIUmea53rS_MypVyfA?e=ZYb1Kc" target="_blank" class="section-link" title="CJoy Monitoring Absence Without Official Leave" data-filter="others">
+        <div class="section">
+            <img src="icons/rtwnnod.png" alt="CJoy Monitoring Absence Without Official Leave">
+            <h2>CJoy Monitoring Abs...</h2>
+        </div>
+	</a>
+
+<a href="https://cargillonline-my.sharepoint.com/:x:/g/personal/reginejoan_tayco_cargill_com/EVYIBgWz351NlkAmbHTgUXYB3QjHH8hP5gzhUs3iMjG_zw?e=zj8DM9" target="_blank" class="section-link" title="Cash Advance Form 6" data-filter="others">
+        <div class="section">
+            <img src="icons/rtwnnod.png" alt="Cash Advance Form 6">
+            <h2>Cash Advance Form 6</h2>
+        </div>
+	</a>
+
+<a href="https://cargillonline-my.sharepoint.com/:x:/g/personal/reginejoan_tayco_cargill_com/ERQ-dg2DwMpOoDKNX9l8ftQBzXkuu1lNzh3doRCOU4KZDw?e=LbSkPU" target="_blank" class="section-link" title="Creating Registered AWOL Mails" data-filter="others">
+        <div class="section">
+            <img src="icons/rtwnnod.png" alt="Creating Registered AWOL Mails">
+            <h2>Creating Registered...</h2>
+        </div>
+	</a>
+
+<a href="https://cargillonline-my.sharepoint.com/:v:/g/personal/reginejoan_tayco_cargill_com/ES8Eu83yq2VPsH1kbbeUHkYByAXTbNR_DN-fcZC-Vck-LA?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=Uma67i" target="_blank" class="section-link" title="How To Mail Merge mp4" data-filter="others">
+        <div class="section">
+            <img src="icons/rtwnnod.png" alt="How To Mail Merge">
+            <h2>How to Mail Merge</h2>
+        </div>
+	</a>
+
+<a href="https://cargillonline-my.sharepoint.com/:x:/g/personal/reginejoan_tayco_cargill_com/EQxe3aecpLlEp-zqa1qsCEsBDPtG0Wra1EEHpfufHh2GTA?e=a9pggE" target="_blank" class="section-link" title="RTWN Nov 2024" data-filter="others">
+        <div class="section">
+            <img src="icons/rtwnnod.png" alt="RTWN Nov 2024">
+            <h2>RTWN Nov 2024</h2>
+        </div>
+	</a>
+<a href="https://cargillonline-my.sharepoint.com/:x:/g/personal/reginejoan_tayco_cargill_com/EZvHnhjDB3FIv8P-iBVfylEB6qiKoVoRkqH5qgS5_xkzMg?e=sEevXP" target="_blank" class="section-link" title="RTWN Nov 2024" data-filter="others">
+        <div class="section">
+            <img src="icons/rtwnnod.png" alt="Cash Advance 3.11.2025">
+            <h2>Cash Advance...</h2>
+        </div>
+	</a>	
+				
+		    </main>
+
+
+
+<script>
+function updateSections() {
+    const query = document.getElementById('search').value.toLowerCase();
+    const filterValue = document.getElementById('filter').value;
+    const links = document.querySelectorAll('main.sections > a');
+
+    links.forEach(link => {
+        const altText = link.querySelector('img')?.alt.toLowerCase() || '';
+        const category = link.getAttribute('data-filter');
+
+        const matchesFilter = (filterValue === 'all' || category === filterValue);
+        const matchesSearch = altText.includes(query);
+
+        link.style.display = (matchesFilter && matchesSearch) ? 'block' : 'none';
+    });
+}
+</script>
+
+<script>
+  function clearSearch() {
+    document.getElementById('search').value = '';
+    document.getElementById('filter').value = 'all';
+    updateSections(); // Refresh the view after clearing
+  }
+</script>
+
+
+
+
+
+</body>
+</html>

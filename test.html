@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Links</title>
+    <script>
+        function loadXMLDoc() {
+            const xhr = new XMLHttpRequest();
+            xhr.open("GET", "data.xml", true);
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    displayData(xhr.responseXML);
+                }
+            };
+            xhr.send();
+        }
+
+        function displayData(xml) {
+            const items = xml.getElementsByTagName("Item");
+            let output = "<h2>Employee Links</h2><ul>";
+            for (let i = 0; i < items.length; i++) {
+                const title = items[i].getElementsByTagName("Title")[0].childNodes[0].nodeValue;
+                const url = items[i].getElementsByTagName("URL")[0].childNodes[0].nodeValue;
+                output += `<li><a href="${url}" target="_blank">${title}</a></li>`;
+            }
+            output += "</ul>";
+            document.getElementById("content").innerHTML = output;
+        }
+
+        window.onload = loadXMLDoc;
+    </script>
+</head>
+<body>
+    <div id="content"></div>
+</body>
+</html>

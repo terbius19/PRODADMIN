@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRODUCTION ADMINISTRATOR</title>
+    <link rel="stylesheet" href="styles.css">
+<link rel="icon" href="icons/adminlogo.png" type="image/png">
+
+</head>
+<body>
+    <header>
+<nav>
+            <div class="logo">
+                <a href="productionadmin_index.html">
+                <img src="icons/adminlogo.png" alt="Logo">
+                </a>
+                <a href="" class="no-underline">
+                </a>
+            </div>
+        </nav>
+    
+        <h1>COMPANY IDENTIFICATION CARD</h1>
+    </header>
+
+
+
+<div class="center-controls">
+
+ <div class="search-container">
+
+
+<button onclick="clearSearch()">Clear</button>
+
+<input type="text" id="search" oninput="updateSections()" placeholder="Search...">
+<select id="filter" onchange="updateSections()">
+  <option value="all">All</option>
+  <option value="cpi">CPI Company ID Template</option>
+  <option value="loto">LOTO Identification Card</option>
+  <option value="cictemplates">CJoy Identification Card Templates</option>
+  <!-- Add more categories as needed -->
+</select>
+
+</div>
+</div>
+
+<section class="navigate-icons">
+  <a href="cic.html" title="Company Identification Card 2025"><img src="icons/cic.png" alt="Icon 5"></a>
+  <a href="ukg.html" title="CJoy UKG 2025"><img src="icons/ukg.png" alt="Icon 6"></a>
+  <a href="employeeconcerns.html" title="Employee Concerns"><img src="icons/employeeconcerns.png" alt="Icon 7"></a>
+  <a href="liquidation.html" title="CJoy Reimbursement and Liquidation"><img src="icons/liquidation.png" alt="Icon 8"></a>
+  <a href="onboarding.html" title="Onboarding 2025"><img src="icons/onboarding.png" alt="Icon 9"></a>
+  <a href="cocolife.html" title="Cocolife"><img src="icons/files.png" alt="Icon 10"></a>
+  <a href="manhour.html" title="Fy25 Manhour Report"><img src="icons/manhour.png" alt="Icon 1"></a>
+  <a href="offboarding.html" title="Offboarding"><img src="icons/offboarding.png" alt="Icon 2"></a>
+  <a href="awolmonitoring.html" title="AWOL Monitoring"><img src="icons/rtwnnod.png" alt="Icon 3"></a>
+  <a href="standardprocesses.html" title="Standard Processes"><img src="icons/standardprocesses.png" alt="Icon 4"></a>
+
+
+</section>
+
+
+
+    <main class="sections">
+
+	<a href="https://cargillonline-my.sharepoint.com/:w:/g/personal/reginejoan_tayco_cargill_com/EYsIljL4DDFKnIqG-I0cu18BpkJJJ2MrGZBy80CwgoJMSQ?e=06Bg6d" target="_blank" class="section-link" title="Employee Name CPI Identification Card" data-filter="cpi">
+        <div class="section">
+            <img src="icons/cic.png" alt="Employee Name CPI Identification Card">
+            <h2>Employee Name CPI...</h2>
+        </div>
+	</a>
+
+	<a href="https://cargillonline-my.sharepoint.com/:b:/g/personal/reginejoan_tayco_cargill_com/EbCuIBzu421LlDcMoDgvrfQBqxKoVj7Y_Ft1pnc58IC9qA?e=ucn47O" target="_blank" class="section-link" title="CPI Identification Card Back Template" data-filter="cpi">
+        <div class="section">
+            <img src="icons/cic.png" alt="CPI Identification Card Back Template">
+            <h2>CPI Identification...</h2>
+        </div>
+	</a>
+
+	<a href="https://cargillonline-my.sharepoint.com/:x:/g/personal/reginejoan_tayco_cargill_com/EZFQlxcmR5pLi2KdzAm6MmwBDwa582Z3uVTrQ5zPw2m-iQ?e=E8WyAo" target="_blank" class="section-link" title="Locked In Names" data-filter="loto">
+        <div class="section">
+            <img src="icons/cic.png" alt="Locked In Names">
+            <h2>Locked In Names</h2>
+        </div>
+	</a>
+
+	<a href="https://cargillonline-my.sharepoint.com/:w:/g/personal/reginejoan_tayco_cargill_com/EZ_zcYGDunJMpBm7UO-fUhIBh7Gn-75fKDz1O7195ck2bA?e=UpFFnT" target="_blank" class="section-link" title="Locked In Locked Out Back Template docx" data-filter="loto">
+        <div class="section">
+            <img src="icons/cic.png" alt="Locked In Locked Out Back Template">
+            <h2>Locked In Locked...</h2>
+        </div>
+	</a>
+
+	<a href="https://cargillonline-my.sharepoint.com/:w:/g/personal/reginejoan_tayco_cargill_com/EQ0-vFf1lz5Fo9CglpLHHjkBEVlVod2xZoDBrZLS3X3CmQ?e=yRQKCe" target="_blank" class="section-link docx" title="Locked In Locked Out Front Template" data-filter="loto">
+        <div class="section">
+            <img src="icons/cic.png" alt="Locked In Locked Out Front Template">
+            <h2>Locked In Locked...</h2>
+        </div>
+	</a>
+
+	<a href="https://cargillonline-my.sharepoint.com/:x:/g/personal/reginejoan_tayco_cargill_com/ESSRHEUayaFMmH7_f8mdc6YBsWZUPJFJN8w0bIJnEroqxA?e=tkgEWE" target="_blank" class="section-link" title="LOTO Creation" data-filter="loto">
+        <div class="section">
+            <img src="icons/cic.png" alt="LOTO Creation">
+            <h2>LOTO Creation</h2>
+        </div>
+	</a>
+	
+	<a href="https://cargillonline-my.sharepoint.com/:x:/g/personal/irene_aguto_cargill_com/EYJbVr3a2SBBhD_KOPjZBU8B0BzMqWxuKMQykvtSYE7tig?e=3BS0bR" target="_blank" class="section-link" title="LOTO ID Monitoring" data-filter="loto">
+        <div class="section">
+            <img src="icons/cic.png" alt="LOTO ID Monitoring">
+            <h2>LOTO ID Moni...</h2>
+        </div>
+	</a>
+	
+	
+	<a href="https://cargillonline-my.sharepoint.com/:w:/g/personal/reginejoan_tayco_cargill_com/EaRSo1xFnAtIiX6yjGH0DqIBIP3UtbV0VnteG_Ir7dj0Xg?e=Y0OgvH" target="_blank" class="section-link docx" title="Identification Card Front Template docx" data-filter="cictemplates">
+        <div class="section">
+            <img src="icons/cic.png" alt="Identification Card Front Template">
+            <h2>Identification Card...</h2>
+        </div>
+	</a>
+
+	<a href="https://cargillonline-my.sharepoint.com/:w:/g/personal/reginejoan_tayco_cargill_com/Ed24bRFWEYpDv3HyC9mSzr0Bg5VjA1tbWSO36C0vuJoB7g?e=aIZCiF" target="_blank" class="section-link docx" title="Identification Card Request Form docx" data-filter="cictemplates">
+        <div class="section">
+            <img src="icons/cic.png" alt="Identification Card Request Form">
+            <h2>Identification Card...</h2>
+        </div>
+	</a>
+
+	<a href="https://cargillonline-my.sharepoint.com/:x:/g/personal/reginejoan_tayco_cargill_com/EQOWJUHJR9xEv1cy_6TZJmsBqiYi4KX1V0kXBd8OXMuHWg?e=IQVLEb" target="_blank" class="section-link docx" title="CJoy Identification Card" data-filter="cictemplates">
+        <div class="section">
+            <img src="icons/cic.png" alt="CJoy Identification Card">
+            <h2>CJoy Identification...</h2>
+        </div>
+	</a>
+
+	<a href="https://cargillonline-my.sharepoint.com/:x:/g/personal/reginejoan_tayco_cargill_com/EWQIVf0Fe3NEoIm2DceUHwgBfxLDsLJM2RS5a74xLUDSRw?e=riYPpL" target="_blank" class="section-link docx" title="Identification Card Plotting" data-filter="cictemplates">
+        <div class="section">
+            <img src="icons/cic.png" alt="Identification Card Plotting">
+            <h2>Identification Card...</h2>
+        </div>
+	</a>
+
+	<a href="https://cargillonline-my.sharepoint.com/:b:/g/personal/reginejoan_tayco_cargill_com/EfRshHlUBiNDu_A3QBLIL_8BahLB5OzOzVsshGwBsjUpAg?e=c5Cu49" target="_blank" class="section-link docx" title="Identification Card Back Template docx" data-filter="cictemplates">
+        <div class="section">
+            <img src="icons/cic.png" alt="Identification Card Back Template">
+            <h2>Identification Card...</h2>
+        </div>
+	</a>
+
+	<a href="https://cargillonline-my.sharepoint.com/:b:/g/personal/reginejoan_tayco_cargill_com/EQ06nCu7wwREmqkptePpGZEBlROxnPLCFNrCSwHPI5_6Rg?e=WvoHr0" target="_blank" class="section-link docx" title="ID Request Form pdf" data-filter="cictemplates">
+        <div class="section">
+            <img src="icons/cic.png" alt="ID Request Form">
+            <h2>ID Request Form</h2>
+        </div>
+	</a>
+	
+	<a href="https://cargillonline-my.sharepoint.com/:b:/g/personal/reginejoan_tayco_cargill_com/Ed2xAS1ec09NjnMN-J5CCbsBwHX8-Kl4MlquCsPfee6faw?e=8d6VtB" target="_blank" class="section-link docx" title="ID Request Form pdf" data-filter="cictemplates">
+        <div class="section">
+            <img src="icons/cic.png" alt="CJoy Identification Card Back Template">
+            <h2>CJoy Identification...</h2>
+        </div>
+	</a>	
+		
+		    </main>
+
+
+
+<script>
+function updateSections() {
+    const query = document.getElementById('search').value.toLowerCase();
+    const filterValue = document.getElementById('filter').value;
+    const links = document.querySelectorAll('main.sections > a');
+
+    links.forEach(link => {
+        const altText = link.querySelector('img')?.alt.toLowerCase() || '';
+        const category = link.getAttribute('data-filter');
+
+        const matchesFilter = (filterValue === 'all' || category === filterValue);
+        const matchesSearch = altText.includes(query);
+
+        link.style.display = (matchesFilter && matchesSearch) ? 'block' : 'none';
+    });
+}
+</script>
+
+
+
+<script>
+  function clearSearch() {
+    document.getElementById('search').value = '';
+    document.getElementById('filter').value = 'all';
+    updateSections(); // Refresh the view after clearing
+  }
+</script>
+
+
+
+
+
+
+
+</body>
+</html>

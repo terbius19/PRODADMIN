@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRODUCTION ADMINISTRATOR</title>
+    <link rel="stylesheet" href="styles.css">
+<link rel="icon" href="icons/adminlogo.png" type="image/png">
+
+</head>
+<body>
+    <header>
+<nav>
+            <div class="logo">
+                <a href="productionadmin_index.html">
+                <img src="icons/adminlogo.png" alt="Logo">
+                </a>
+                <a href="" class="no-underline">
+                </a>
+            </div>
+        </nav>
+    
+        <h1>EMPLOYEE CONCERNS</h1>
+    </header>
+
+
+
+
+<div class="center-controls">
+
+ <div class="search-container">
+
+<button onclick="clearSearch()">Clear</button>
+<input type="text" id="search" oninput="updateSections()" placeholder="Search...">
+<select id="filter" onchange="updateSections()">
+  <option value="all">All</option>
+  <option value="employeeconcerns">Employee Concerns</option>
+  <option value="others">Others</option>
+  <!-- Add more categories as needed -->
+</select>
+
+</div>
+</div>
+
+
+
+<section class="navigate-icons">
+  <a href="employeeconcerns.html" title="Employee Concerns"><img src="icons/employeeconcerns.png" alt="Icon 7"></a>
+  <a href="liquidation.html" title="CJoy Reimbursement and Liquidation"><img src="icons/liquidation.png" alt="Icon 8"></a>
+  <a href="onboarding.html" title="Onboarding 2025"><img src="icons/onboarding.png" alt="Icon 9"></a>
+  <a href="cocolife.html" title="Cocolife"><img src="icons/files.png" alt="Icon 10"></a>
+  <a href="manhour.html" title="Fy25 Manhour Report"><img src="icons/manhour.png" alt="Icon 1"></a>
+  <a href="offboarding.html" title="Offboarding"><img src="icons/offboarding.png" alt="Icon 2"></a>
+  <a href="awolmonitoring.html" title="AWOL Monitoring"><img src="icons/rtwnnod.png" alt="Icon 3"></a>
+  <a href="standardprocesses.html" title="Standard Processes"><img src="icons/standardprocesses.png" alt="Icon 4"></a>
+  <a href="cic.html" title="Company Identification Card 2025"><img src="icons/cic.png" alt="Icon 5"></a>
+  <a href="ukg.html" title="CJoy UKG 2025"><img src="icons/ukg.png" alt="Icon 6"></a>
+
+
+</section>
+
+
+
+
+    <main class="sections">
+	
+	<a href="https://cargillonline-my.sharepoint.com/:x:/g/personal/reginejoan_tayco_cargill_com/ET8bjKTFGpxDvlpHTXcIEckB_S8cxjeP2dv7Pc03Fsl1jg?e=4lUUvb" class="section-link" target="_blank" title="Employees Concern and Request" data-filter="employeeconcerns">
+        <div class="section">
+            <img src="icons/employeeconcerns.png" alt="Employees Concern and Request">
+            <h2>Employees Concerns...</h2>
+        </div>
+	</a>
+	<a href="https://cargillonline-my.sharepoint.com/:x:/g/personal/reginejoan_tayco_cargill_com/ESFlk89vwi5Ko7AvBZrOlyoBRgVJ_Pk0rcfY9DPBrtwXFA?e=OjIRE5" class="section-link" target="_blank" title="Ticket Raised Summary" data-filter="employeeconcerns">
+        <div class="section">
+            <img src="icons/employeeconcerns.png" alt="Ticket Raised Summary">
+            <h2>Ticket Raised Sum...</h2>
+        </div>
+	</a>
+	<a href="https://cargillonline-my.sharepoint.com/:x:/g/personal/reginejoan_tayco_cargill_com/EYnksKtyBdNLl_fFZLY8CaQBP-jihkeRWalr3evuN5pwcQ?e=zs3M30" class="section-link" target="_blank" title="Cocolife Cards and Loan Forms FY 2025" data-filter="employeeconcerns">
+        <div class="section">
+            <img src="icons/employeeconcerns.png" alt="COCOLIFE CARDS and LOAN FORMS FY 2025">
+            <h2>Cocolife Cards And...</h2>
+        </div>
+	</a>
+
+	    </main>
+
+<script>
+function sortSections() {
+    const container = document.querySelector('.sections');
+    const sections = Array.from(container.querySelectorAll('.section-link'));
+    const sortOrder = document.getElementById('sort').value;
+
+    sections.sort((a, b) => {
+        const nameA = a.querySelector('h2').textContent.toUpperCase();
+        const nameB = b.querySelector('h2').textContent.toUpperCase();
+        if (nameA < nameB) return sortOrder === 'asc' ? -1 : 1;
+        if (nameA > nameB) return sortOrder === 'asc' ? 1 : -1;
+        return 0;
+    });
+
+    // Clear and re-append sorted sections
+    container.innerHTML = '';
+    sections.forEach(section => container.appendChild(section));
+}
+
+
+</script>
+
+
+<script>
+function updateSections() {
+    const query = document.getElementById('search').value.toLowerCase();
+    const filterValue = document.getElementById('filter').value;
+    const sections = document.querySelectorAll('.section-link');
+
+    sections.forEach(section => {
+        const altText = section.querySelector('img')?.alt.toLowerCase() || '';
+        const category = section.getAttribute('data-filter');
+
+        const matchesFilter = (filterValue === 'all' || category === filterValue);
+        const matchesSearch = altText.includes(query);
+
+        section.style.display = (matchesFilter && matchesSearch) ? 'block' : 'none';
+    });
+}
+</script>
+
+<script>
+  function clearSearch() {
+    document.getElementById('search').value = '';
+    document.getElementById('filter').value = 'all';
+    updateSections(); // Refresh the view after clearing
+  }
+</script>
+
+
+<script>
+const sectionsData = JSON.parse(localStorage.getItem('sectionsData')) || [
+    {
+        heading: "Employees Concern and Request", // This will be the H2
+        href: "https://cargillonline-my.sharepoint.com/:x:/g/personal/reginejoan_tayco_cargill_com/ET8bjKTFGpxDvlpHTXcIEckB_S8cxjeP2dv7Pc03Fsl1jg?e=4lUUvb",
+        title: "Employees Concern and Request", // This will be the alt and title
+        filter: "employeeconcerns",
+        imgSrc: "icons/employeeconcerns.png" // Icon
+    },
+    // Add other sections as needed
+];
+
+function renderSections() {
+    const container = document.querySelector('.sections');
+    container.innerHTML = ''; // Clear existing sections
+
+    sectionsData.forEach(section => {
+        const sectionLink = document.createElement('a');
+        sectionLink.href = section.href;
+        sectionLink.className = 'section-link';
+        sectionLink.target = '_blank';
+        sectionLink.title = section.title; // Use title for the link
+        sectionLink.setAttribute('data-filter', section.filter);
+
+        const sectionDiv = document.createElement('div');
+        sectionDiv.className = 'section';
+
+        const img = document.createElement('img');
+        img.src = section.imgSrc; // Use the icon from the section data
+        img.alt = section.title; // Use the title as alt text
+
+        const h2 = document.createElement('h2');
+        h2.textContent = section.heading; // Use the heading for the h2
+
+        sectionDiv.appendChild(img);
+        sectionDiv.appendChild(h2);
+        sectionLink.appendChild(sectionDiv);
+        container.appendChild(sectionLink);
+    });
+}
+
+// Call renderSections to display the sections on page load
+document.addEventListener('DOMContentLoaded', renderSections);
+</script>
+
+
+
+
+
+
+</body>
+</html>

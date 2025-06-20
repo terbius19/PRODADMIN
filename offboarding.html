@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRODUCTION ADMINISTRATOR</title>
+    <link rel="stylesheet" href="styles.css">
+<link rel="icon" href="icons/adminlogo.png" type="image/png">
+
+</head>
+<body>
+    <header>
+<nav>
+            <div class="logo">
+                <a href="productionadmin_index.html">
+                <img src="icons/adminlogo.png" alt="Logo">
+                </a>
+                <a href="" class="no-underline">
+                </a>
+            </div>
+        </nav>
+    
+        <h1>OFFBOARDING</h1>
+    </header>
+
+
+
+<div class="center-controls">
+
+ <div class="search-container">
+
+<button onclick="clearSearch()">Clear</button>
+<input type="text" id="search" oninput="updateSections()" placeholder="Search...">
+<select id="filter" onchange="updateSections()">
+  <option value="all">All</option>
+  <option value="resignedemployees">Resigned Employees</option>
+  <option value="offboardingdocuments">Offboarding Documents</option>
+  <option value="others">Others</option>
+  <!-- Add more categories as needed -->
+</select>
+
+</div>
+</div>
+
+<section class="navigate-icons">
+  <a href="offboarding.html" title="Offboarding"><img src="icons/offboarding.png" alt="Icon 2"></a>
+  <a href="awolmonitoring.html" title="AWOL Monitoring"><img src="icons/rtwnnod.png" alt="Icon 3"></a>
+  <a href="standardprocesses.html" title="Standard Processes"><img src="icons/standardprocesses.png" alt="Icon 4"></a>
+  <a href="cic.html" title="Company Identification Card 2025"><img src="icons/cic.png" alt="Icon 5"></a>
+  <a href="ukg.html" title="CJoy UKG 2025"><img src="icons/ukg.png" alt="Icon 6"></a>
+  <a href="employeeconcerns.html" title="Employee Concerns"><img src="icons/employeeconcerns.png" alt="Icon 7"></a>
+  <a href="liquidation.html" title="CJoy Reimbursement and Liquidation"><img src="icons/liquidation.png" alt="Icon 8"></a>
+  <a href="onboarding.html" title="Onboarding 2025"><img src="icons/onboarding.png" alt="Icon 9"></a>
+  <a href="cocolife.html" title="Cocolife"><img src="icons/files.png" alt="Icon 10"></a>
+  <a href="manhour.html" title="Fy25 Manhour Report"><img src="icons/manhour.png" alt="Icon 1"></a>
+
+
+</section>
+
+
+    <main class="sections">
+
+	<a href="https://cargillonline-my.sharepoint.com/:x:/g/personal/reginejoan_tayco_cargill_com/EZ6zoIB-ErFFjL228ZZEjs8BVyYkmkczzs0OfoyvDtDt5g?e=s2Y3bg" target="_blank" class="section-link" title="Resigned Employees 2024" data-filter="resignedemployees">
+        <div class="section">
+            <img src="icons/offboarding.png" alt="Resigned Employees 2024">
+            <h2>Resigned Employees...</h2>
+        </div>
+	</a>
+
+	<a href="https://cargillonline-my.sharepoint.com/:x:/g/personal/reginejoan_tayco_cargill_com/EUkICcd3-QRPijcqBQ3MmtkB0d56MeeXUL2wV_vzXyN0ZQ?e=5WsuQY" target="_blank" class="section-link" title="Resigned Employees 2025" data-filter="resignedemployees">
+        <div class="section">
+            <img src="icons/offboarding.png" alt="Resigned Employees 2025">
+            <h2>Resigned Employees...</h2>
+        </div>
+	</a>
+
+
+	<a href="https://cargillonline-my.sharepoint.com/:x:/g/personal/reginejoan_tayco_cargill_com/EW9dHX50pAxKg9Qp22VwTikBl-FsIoGbtfKPLb5cB8YtaQ?e=WHSaAE" target="_blank" class="section-link" title="Resigned Employees Accountability Form" data-filter="offboardingdocuments">
+        <div class="section">
+            <img src="icons/offboarding.png" alt="Resigned Employees Accountability Form">
+            <h2>Resigned Employees...</h2>
+        </div>
+	</a>
+
+	<a href="https://cargillonline-my.sharepoint.com/:b:/g/personal/reginejoan_tayco_cargill_com/EQj_pJjQZ-hDs3-mcahF5TIBsJF6itmbWrHZSunlSv_-TQ?e=fcYtFd" target="_blank" class="section-link" title="Exit Interview Form pdf" data-filter="offboardingdocuments">
+        <div class="section">
+            <img src="icons/offboarding.png" alt="Exit Interview Form PDF">
+            <h2>Exit Interview Form...</h2>
+        </div>
+	</a>
+
+	<a href="https://cargillonline-my.sharepoint.com/:b:/g/personal/reginejoan_tayco_cargill_com/EQq0yTxesOtIkmU0rEMd99gBTBtlhwPm1CeCKZfzkTKjyw?e=xWWnx2" target="_blank" class="section-link" title="CJoy Clearance Form pdf" data-filter="offboardingdocuments">
+        <div class="section">
+            <img src="icons/offboarding.png" alt="CJoy Clearance Form">
+            <h2>CJoy Clearance Form</h2>
+        </div>
+	</a>
+
+	<a href="https://cargillonline-my.sharepoint.com/:x:/g/personal/reginejoan_tayco_cargill_com/EXdJtagp9w1MuHwi5dGoVXMB-m393onXto558La7CQyulQ?e=BnkMAt" target="_blank" class="section-link" title="Exit Interview Form xlsx" data-filter="others">
+        <div class="section">
+            <img src="icons/offboarding.png" alt="Exit Interview Form xlsx">
+            <h2>Exit Interview Form...</h2>
+        </div>
+	</a>
+
+	<a href="https://cargillonline-my.sharepoint.com/:x:/g/personal/reginejoan_tayco_cargill_com/EZk8xtnBySZCuMOJ01rd-XcBTFYUxCdA3f7ZvnDzJRg3-A?e=DSmHTu" target="_blank" class="section-link" title="Employee Clearance 2024" data-filter="others">
+        <div class="section">
+            <img src="icons/offboarding.png" alt="Employee Clearance 2024">
+            <h2>Employee Clearance...</h2>
+        </div>
+	</a>
+
+
+
+	
+		    </main>
+
+
+
+<script>
+function updateSections() {
+    const query = document.getElementById('search').value.toLowerCase();
+    const filterValue = document.getElementById('filter').value;
+    const links = document.querySelectorAll('main.sections > a');
+
+    links.forEach(link => {
+        const altText = link.querySelector('img')?.alt.toLowerCase() || '';
+        const category = link.getAttribute('data-filter');
+
+        const matchesFilter = (filterValue === 'all' || category === filterValue);
+        const matchesSearch = altText.includes(query);
+
+        link.style.display = (matchesFilter && matchesSearch) ? 'block' : 'none';
+    });
+}
+</script>
+
+<script>
+  function clearSearch() {
+    document.getElementById('search').value = '';
+    document.getElementById('filter').value = 'all';
+    updateSections(); // Refresh the view after clearing
+  }
+</script>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRODUCTION ADMINISTRATOR</title>
+    <link rel="stylesheet" href="styles.css">
+<link rel="icon" href="icons/adminlogo.png" type="image/png">
+
+</head>
+<body>
+    <header>
+<nav>
+            <div class="logo">
+                <a href="productionadmin_index.html">
+                <img src="icons/adminlogo.png" alt="Logo">
+                </a>
+                <a href="" class="no-underline">
+                </a>
+            </div>
+        </nav>
+    
+        <h1>CARGILL EMPLOYEE DATA FY2025</h1>
+    </header>
+
+
+
+<div class="center-controls">
+
+ <div class="search-container">
+
+<button onclick="clearSearch()">Clear</button>
+<input type="text" id="search" oninput="updateSections()" placeholder="Search...">
+<select id="filter" onchange="updateSections()">
+  <option value="all">All</option>
+  <option value="employeedata">Cargill Employee Data FY25</option>
+  <option value="others">Others</option>
+  <!-- Add more categories as needed -->
+</select>
+
+</div>
+</div>
+
+
+    <main class="sections">
+
+	<a href="https://cargillonline-my.sharepoint.com/:x:/g/personal/reginejoan_tayco_cargill_com/EeuJ8omID2VProxe9OwBqN4BjD5AUPsORiOU2hzUtBKYKg?e=OcI6y8" target="_blank" class="section-link" title="FY2025 Cargill Employee Data Report" data-filter="employeedata">
+        <div class="section">
+            <img src="icons/employeedata.png" alt="FY2025 Cargill Employee Data Report">
+            <h2>FY2025 Cargill Employee...</h2>
+        </div>
+	</a>
+
+	<a href="https://cargillonline-my.sharepoint.com/:x:/g/personal/reginejoan_tayco_cargill_com/EXD7uh0JU15FmqKqWL4MEmwBTKwuDkVJPxWEZyhi33t5DQ?e=77vPFj" target="_blank" class="section-link" title="FY2025 Cargill Employee Data Report 1" data-filter="employeedata">
+        <div class="section">
+            <img src="icons/employeedata.png" alt="FY2025 Cargill Employee Data Report">
+            <h2>FY2025 Cargill Employee...</h2>
+        </div>
+	</a>
+
+			
+		    </main>
+
+
+
+<script>
+function updateSections() {
+    const query = document.getElementById('search').value.toLowerCase();
+    const filterValue = document.getElementById('filter').value;
+    const links = document.querySelectorAll('main.sections > a');
+
+    links.forEach(link => {
+        const altText = link.querySelector('img')?.alt.toLowerCase() || '';
+        const category = link.getAttribute('data-filter');
+
+        const matchesFilter = (filterValue === 'all' || category === filterValue);
+        const matchesSearch = altText.includes(query);
+
+        link.style.display = (matchesFilter && matchesSearch) ? 'block' : 'none';
+    });
+}
+</script>
+
+<script>
+  function clearSearch() {
+    document.getElementById('search').value = '';
+    document.getElementById('filter').value = 'all';
+    updateSections(); // Refresh the view after clearing
+  }
+</script>
+
+
+
+
+
+</body>
+</html>

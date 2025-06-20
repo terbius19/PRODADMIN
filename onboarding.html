@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRODUCTION ADMINISTRATOR</title>
+    <link rel="stylesheet" href="styles.css">
+<link rel="icon" href="icons/adminlogo.png" type="image/png">
+
+</head>
+<body>
+    <header>
+<nav>
+            <div class="logo">
+                <a href="productionadmin_index.html">
+                <img src="icons/adminlogo.png" alt="Logo">
+                </a>
+                <a href="" class="no-underline">
+                </a>
+            </div>
+        </nav>
+    
+        <h1>ONBOARDING</h1>
+    </header>
+
+
+
+<div class="center-controls">
+
+ <div class="search-container">
+
+<button onclick="clearSearch()">Clear</button>
+<input type="text" id="search" oninput="updateSections()" placeholder="Search...">
+<select id="filter" onchange="updateSections()">
+  <option value="all">All</option>
+  <option value="onboarding">Onboarding</option>
+  <option value="others">Others</option>
+  <!-- Add more categories as needed -->
+</select>
+
+</div>
+</div>
+
+<section class="navigate-icons">
+  <a href="onboarding.html" title="Onboarding 2025"><img src="icons/onboarding.png" alt="Icon 9"></a>
+  <a href="cocolife.html" title="Cocolife"><img src="icons/files.png" alt="Icon 10"></a>
+  <a href="manhour.html" title="Fy25 Manhour Report"><img src="icons/manhour.png" alt="Icon 1"></a>
+  <a href="offboarding.html" title="Offboarding"><img src="icons/offboarding.png" alt="Icon 2"></a>
+  <a href="awolmonitoring.html" title="AWOL Monitoring"><img src="icons/rtwnnod.png" alt="Icon 3"></a>
+  <a href="standardprocesses.html" title="Standard Processes"><img src="icons/standardprocesses.png" alt="Icon 4"></a>
+  <a href="cic.html" title="Company Identification Card 2025"><img src="icons/cic.png" alt="Icon 5"></a>
+  <a href="ukg.html" title="CJoy UKG 2025"><img src="icons/ukg.png" alt="Icon 6"></a>
+  <a href="employeeconcerns.html" title="Employee Concerns"><img src="icons/employeeconcerns.png" alt="Icon 7"></a>
+  <a href="liquidation.html" title="CJoy Reimbursement and Liquidation"><img src="icons/liquidation.png" alt="Icon 8"></a>
+
+
+</section>
+
+
+    <main class="sections">
+
+	<a href="https://cargillonline-my.sharepoint.com/:x:/g/personal/reginejoan_tayco_cargill_com/EeuJ8omID2VProxe9OwBqN4BjD5AUPsORiOU2hzUtBKYKg?e=OcI6y8" target="_blank" class="section-link" title="Accountability Form 2025" data-filter="onboarding">
+        <div class="section">
+            <img src="icons/onboarding.png" alt="Accountability Form 2025">
+            <h2>Accountability Form...</h2>
+        </div>
+	</a>
+
+	<a href="https://cargillonline-my.sharepoint.com/:x:/g/personal/reginejoan_tayco_cargill_com/EXD7uh0JU15FmqKqWL4MEmwBTKwuDkVJPxWEZyhi33t5DQ?e=77vPFj" target="_blank" class="section-link" title="Newly Hired Employees 2025" data-filter="onboarding">
+        <div class="section">
+            <img src="icons/onboarding.png" alt="Newly Hired Employees 2025">
+            <h2>Newly Hired Employ...</h2>
+        </div>
+	</a>
+	
+	<a href="https://cargillonline-my.sharepoint.com/:x:/g/personal/irene_aguto_cargill_com/EQmYTFJM50tDrchxm1vaiIABAI0u3D9v9AOk20IP_8OSHw?e=cQTFNS" target="_blank" class="section-link" title="Newly Hired Employees 2025" data-filter="onboarding">
+        <div class="section">
+            <img src="icons/onboarding.png" alt="Onboarding Tagging Confirmation">
+            <h2>Onboarding Tagging...</h2>
+        </div>
+	</a>
+
+			
+		    </main>
+
+
+
+<script>
+function updateSections() {
+    const query = document.getElementById('search').value.toLowerCase();
+    const filterValue = document.getElementById('filter').value;
+    const links = document.querySelectorAll('main.sections > a');
+
+    links.forEach(link => {
+        const altText = link.querySelector('img')?.alt.toLowerCase() || '';
+        const category = link.getAttribute('data-filter');
+
+        const matchesFilter = (filterValue === 'all' || category === filterValue);
+        const matchesSearch = altText.includes(query);
+
+        link.style.display = (matchesFilter && matchesSearch) ? 'block' : 'none';
+    });
+}
+</script>
+
+<script>
+  function clearSearch() {
+    document.getElementById('search').value = '';
+    document.getElementById('filter').value = 'all';
+    updateSections(); // Refresh the view after clearing
+  }
+</script>
+
+
+
+
+
+</body>
+</html>

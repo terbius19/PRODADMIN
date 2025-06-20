@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRODUCTION ADMINISTRATOR</title>
+    <link rel="stylesheet" href="styles.css">
+<link rel="icon" href="icons/adminlogo.png" type="image/png">
+
+</head>
+<body>
+    <header>
+<nav>
+            <div class="logo">
+                <a href="productionadmin_index.html">
+                <img src="icons/adminlogo.png" alt="Logo">
+                </a>
+                <a href="" class="no-underline">
+                </a>
+            </div>
+        </nav>
+    
+        <h1>COCOLIFE</h1>
+    </header>
+
+
+
+<div class="center-controls">
+
+ <div class="search-container">
+
+<button onclick="clearSearch()">Clear</button>
+<input type="text" id="search" oninput="updateSections()" placeholder="Search...">
+<select id="filter" onchange="updateSections()">
+  <option value="all">All</option>
+  <option value="cocolife">Cocolife Accredited List</option>
+  <option value="laiason">Laiason Reports</option>
+  <option value="others">Others</option>
+  <!-- Add more categories as needed -->
+</select>
+
+</div>
+</div>
+
+<section class="navigate-icons">
+
+  <a href="cocolife.html" title="Cocolife"><img src="icons/files.png" alt="Icon 10"></a>
+  <a href="manhour.html" title="Fy25 Manhour Report"><img src="icons/manhour.png" alt="Icon 1"></a>
+  <a href="offboarding.html" title="Offboarding"><img src="icons/offboarding.png" alt="Icon 2"></a>
+  <a href="rtwnnod.html" title="RTWN NOD"><img src="icons/rtwnnod.png" alt="Icon 3"></a>
+  <a href="standardprocesses.html" title="Standard Processes"><img src="icons/standardprocesses.png" alt="Icon 4"></a>
+  <a href="cic.html" title="Company Identification Card 2025"><img src="icons/cic.png" alt="Icon 5"></a>
+  <a href="ukg.html" title="CJoy UKG 2025"><img src="icons/ukg.png" alt="Icon 6"></a>
+  <a href="employeeconcerns.html" title="Employee Concerns"><img src="icons/employeeconcerns.png" alt="Icon 7"></a>
+  <a href="liquidation.html" title="CJoy Reimbursement and Liquidation"><img src="icons/liquidation.png" alt="Icon 8"></a>
+  <a href="onboarding.html" title="Onboarding 2025"><img src="icons/onboarding.png" alt="Icon 9"></a>
+
+</section>
+
+
+    <main class="sections">
+
+	<a href="https://cargillonline-my.sharepoint.com/:x:/g/personal/irene_aguto_cargill_com/EY9CBzz2CpVApZXaTMzZoKwBBVFqRPO8hzyfTPMbOZ2rLw?e=PvLymF" target="_blank" class="section-link" title="(Hospital) Accepting Specialists Nationwide" data-filter="cocolife">
+        <div class="section">
+            <img src="icons/files.png" alt="(Hospital) Accepting Specialists Nationwide">
+            <h2>(Hospital) Accepting...</h2>
+        </div>
+	</a>
+
+	<a href="https://cargillonline-my.sharepoint.com/:x:/g/personal/irene_aguto_cargill_com/EWXuZMtrJkNCmeBYXrjEIwMB_deMCeJPYDqqfzj7xG1UkA?e=Dh5tUQ" target="_blank" class="section-link" title="Alternative Facilities" data-filter="cocolife">
+        <div class="section">
+            <img src="icons/files.png" alt="Alternative Facilities">
+            <h2>Alternative Facilities</h2>
+        </div>
+	</a>
+
+<a href="https://cargillonline-my.sharepoint.com/:x:/g/personal/irene_aguto_cargill_com/ERZf1LHdDRpKqQAYZaWO4IkBU8vdc5vc93mt6HuPNBo9Yg?e=kQAa1m" target="_blank" class="section-link" title=" Cocolife(Clinic) Accepting Specialists Nationwide" data-filter="cocolife">
+        <div class="section">
+            <img src="icons/files.png" alt="(Clinic) Accepting Specialists Nationwide">
+            <h2>(Clinic) Accepting...</h2>
+        </div>
+	</a>
+
+	<a href="https://cargillonline-my.sharepoint.com/:x:/g/personal/irene_aguto_cargill_com/Ef-YkVpka2JOrAkF_SLbLjkB-OKJlGRMldPzd4ORt0yn8g?e=YW4zoE" target="_blank" class="section-link" title="Copy of(Hospital) Accepting Specialists Nationwide" data-filter="cocolife">
+        <div class="section">
+            <img src="icons/files.png" alt="Copy of(Hospital) Accepting Specialists Nationwide">
+            <h2>Copy of (Hospital)...</h2>
+        </div>
+	</a>
+
+	<a href="https://cargillonline-my.sharepoint.com/:x:/g/personal/irene_aguto_cargill_com/Efob0AiIeLpCrzcqWCgSBc4BJmNNb0G4aKcRmCR0tqOfXA?e=Tpi4Wm" target="_blank" class="section-link" title="Provider by Region(Marketing)" data-filter="cocolife">
+        <div class="section">
+            <img src="icons/files.png" alt="Provider by Region(Marketing)">
+            <h2>Provider by Region...</h2>
+        </div>
+	</a>
+
+	<a href="https://cargillonline-my.sharepoint.com/:x:/g/personal/irene_aguto_cargill_com/EVEnw87qFp1Ml-UUn0fjhYkBGcSFsOIelEQf2K1e1YULXw?e=tABSIT" target="_blank" class="section-link" title="Cocolife Cards and Loans Form FY2025" data-filter="others">
+        <div class="section">
+            <img src="icons/files.png" alt="Cocolife Cards and Loans Form FY2025">
+            <h2>Cocolife Cards &...</h2>
+        </div>
+	</a>
+	
+		<a href="https://cargillonline-my.sharepoint.com/:x:/g/personal/irene_aguto_cargill_com/EaC78u_zIfNArWfKVzt-oY0BjIE5PKXXWsIm4DR-pK4faw?e=qpXADH" target="_blank" class="section-link" title="Documents From BGC" data-filter="others">
+        <div class="section">
+            <img src="icons/files.png" alt="Documents from BGC">
+            <h2>Documents From...</h2>
+        </div>
+	</a>
+
+	<a href="https://cargillonline-my.sharepoint.com/:x:/g/personal/irene_aguto_cargill_com/EUmWStbjSKdFq7CQHgV3ZhcBl9WFvMtmBX_Jfv2qqWJf6A?e=5xVoLk" target="_blank" class="section-link" title="MyHR Summary Report" data-filter="others">
+        <div class="section">
+            <img src="icons/files.png" alt="MyHR Summary Report">
+            <h2>MyHR Summary Report</h2>
+        </div>
+	</a>
+
+	<a href="https://cargillonline-my.sharepoint.com/:x:/g/personal/irene_aguto_cargill_com/ETbR_DJwLc1Cld82IcpUfywBpf-ok7WPolNkfznT2WTsiw?e=tP3CXo" target="_blank" class="section-link" title="Vehicle Request Feb 27" data-filter="others">
+        <div class="section">
+            <img src="icons/files.png" alt="Vehicle Request Feb 27">
+            <h2>Vehicle Request</h2>
+        </div>
+	</a>
+
+
+
+
+			    </main>
+
+
+
+<script>
+function updateSections() {
+    const query = document.getElementById('search').value.toLowerCase();
+    const filterValue = document.getElementById('filter').value;
+    const links = document.querySelectorAll('main.sections > a');
+
+    links.forEach(link => {
+        const altText = link.querySelector('img')?.alt.toLowerCase() || '';
+        const category = link.getAttribute('data-filter');
+
+        const matchesFilter = (filterValue === 'all' || category === filterValue);
+        const matchesSearch = altText.includes(query);
+
+        link.style.display = (matchesFilter && matchesSearch) ? 'block' : 'none';
+    });
+}
+</script>
+
+<script>
+  function clearSearch() {
+    document.getElementById('search').value = '';
+    document.getElementById('filter').value = 'all';
+    updateSections(); // Refresh the view after clearing
+  }
+</script>
+
+
+
+
+
+</body>
+</html>

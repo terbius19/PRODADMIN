@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Sections</title>
+    <link rel="stylesheet" href="styles.css">
+	<link rel="icon" href="icons/adminlogo.png" type="image/png">
+</head>
+<body>
+    <header>
+<nav>
+            <div class="logo">
+                <a href="productionadmin_index.html">
+                <img src="icons/adminlogo.png" alt="Logo">
+                </a>
+                <a href="" class="no-underline">
+                </a>
+            </div>
+        </nav>
+    
+        <h1>ALL FILES MANAGER</h1>
+    </header>
+
+    <table id="sections-table">
+        <thead>
+            <tr>
+                <th>File Name</th>
+                <th>URL Link</th>
+                <th>Title (Alt & Title)</th>
+                <th>File Filter</th>
+                <th>Icon</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="sections-container"></tbody>
+    </table>
+    <button onclick="addNewSection()">Add New Section</button>
+
+    <script>
+        // Load sections from local storage or initialize with an empty array
+        let sectionsData = JSON.parse(localStorage.getItem('sectionsData')) || [];
+
+        function renderSections() {
+            const container = document.getElementById('sections-container');
+            container.innerHTML = ''; // Clear existing sections
+
+            sectionsData.forEach((section, index) => {
+                const row = document.createElement('tr');
+
+                row.innerHTML = `
+                    <td><input type="text" value="${section.heading}" onchange="updateSectionHeading(${index}, this.value)" placeholder="File Name (H2)"></td>
+                    <td><input type="text" value="${section.href}" onchange="updateSectionHref(${index}, this.value)" placeholder="URL Link"></td>
+                    <td><input type="text" value="${section.title}" onchange="updateSectionTitle(${index}, this.value)" placeholder="Title (Alt & Title)"></td>
+                    <td><input type="text" value="${section.filter}" onchange="updateSectionFilter(${index}, this.value)" placeholder="File Filter"></td>
+                    <td><input type="text" value="${section.imgSrc}" onchange="updateSectionImg(${index}, this.value)" placeholder="Icon" /></td>
+                    <td><button onclick="deleteSection(${index})">Delete</button></td>
+                `;
+
+                container.appendChild(row);
+            });
+        }
+
+        function addNewSection() {
+            const newSection = {
+                heading: "New Section", // This will be the H2
+                href: "#",
+                title: "New Section Title", // This will be the alt and title
+                filter: "all",
+                imgSrc: "icons/employeeconcerns.png" // Default icon
+            };
+            sectionsData.push(newSection);
+            saveSections();
+            renderSections();
+        }
+
+        function updateSectionHeading(index, newHeading) {
+            sectionsData[index].heading = newHeading;
+            saveSections();
+        }
+
+        function updateSectionHref(index, newHref) {
+            sectionsData[index].href = newHref;
+            saveSections();
+        }
+
+        function updateSectionTitle(index, newTitle) {
+            sectionsData[index].title = newTitle;
+            saveSections();
+        }
+
+        function updateSectionFilter(index, newFilter) {
+            sectionsData[index].filter = newFilter;
+            saveSections();
+        }
+
+        function updateSectionImg(index, newImgSrc) {
+            sectionsData[index].imgSrc = newImgSrc;
+            saveSections();
+        }
+
+        function deleteSection(index) {
+            sectionsData.splice(index, 1);
+            saveSections();
+            renderSections();
+        }
+
+        function saveSections() {
+            localStorage.setItem('sectionsData', JSON.stringify(sectionsData));
+        }
+
+        // Initial render
+        renderSections();
+    </script>
+</body>
+</html>
