@@ -142,52 +142,6 @@ function updateSections() {
 </script>
 
 
-<script>
-const sectionsData = JSON.parse(localStorage.getItem('sectionsData')) || [
-    {
-        heading: "Employees Concern and Request", // This will be the H2
-        href: "https://cargillonline-my.sharepoint.com/:x:/g/personal/reginejoan_tayco_cargill_com/ET8bjKTFGpxDvlpHTXcIEckB_S8cxjeP2dv7Pc03Fsl1jg?e=4lUUvb",
-        title: "Employees Concern and Request", // This will be the alt and title
-        filter: "employeeconcerns",
-        imgSrc: "icons/employeeconcerns.png" // Icon
-    },
-    // Add other sections as needed
-];
-
-function renderSections() {
-    const container = document.querySelector('.sections');
-    container.innerHTML = ''; // Clear existing sections
-
-    sectionsData.forEach(section => {
-        const sectionLink = document.createElement('a');
-        sectionLink.href = section.href;
-        sectionLink.className = 'section-link';
-        sectionLink.target = '_blank';
-        sectionLink.title = section.title; // Use title for the link
-        sectionLink.setAttribute('data-filter', section.filter);
-
-        const sectionDiv = document.createElement('div');
-        sectionDiv.className = 'section';
-
-        const img = document.createElement('img');
-        img.src = section.imgSrc; // Use the icon from the section data
-        img.alt = section.title; // Use the title as alt text
-
-        const h2 = document.createElement('h2');
-        h2.textContent = section.heading; // Use the heading for the h2
-
-        sectionDiv.appendChild(img);
-        sectionDiv.appendChild(h2);
-        sectionLink.appendChild(sectionDiv);
-        container.appendChild(sectionLink);
-    });
-}
-
-// Call renderSections to display the sections on page load
-document.addEventListener('DOMContentLoaded', renderSections);
-</script>
-
-
 
 
 
